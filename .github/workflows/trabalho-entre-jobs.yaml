@@ -26,7 +26,7 @@ jobs:
     steps:
 
       - name: Ver o conteudo do diretorio
-        run: ls -lah && ls -lah ./strigus/
+        run: ls -lah
 
       - uses: actions/download-artifact@v4
         with:
