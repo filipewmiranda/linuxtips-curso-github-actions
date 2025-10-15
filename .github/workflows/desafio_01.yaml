@@ -1,20 +1,15 @@
 name: Desafio Aula01
 
 on:
-  workflow_dispatch
-  
+  workflow_dispatch:
     inputs:
       docker_image:
-        description: 'Digite o nome da imagem Docker'
+        description: 'Digite o nome da imagem Docker (ex.: nginx:latest)'
         required: true
-        
+
 jobs:
   run-image-docker:
     runs-on: ubuntu-latest
     steps:
-      - name: Ler input
-        run: |
-          IMAGE="${{ github.event.inputs.docker_image }}"
-          echo "Usando imagem $IMAGE"
-
-       
+      - name: Mostrar input
+        run: echo "Usando imagem: ${{ github.event.inputs.docker_image }}"
