@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       docker_image:
-        description: 'Digite o nome da imagem Docker (ex.: nginx:latest)'
+        description: 'Digite a imagem Docker (ex.: nginx:latest)'
         required: true
 
 jobs:
@@ -13,3 +13,6 @@ jobs:
     steps:
       - name: Mostrar input
         run: echo "Usando imagem: ${{ github.event.inputs.docker_image }}"
+
+      - name: Pull da imagem
+        run: docker pull "${{ github.event.inputs.docker_image }}"
