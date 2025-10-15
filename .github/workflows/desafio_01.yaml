@@ -1,7 +1,8 @@
 name: Desafio Aula01
 
 on:
-  workflow_dispatch:
+  workflow_dispatch
+  
     inputs:
       docker_image:
         description: 'Digite o nome da imagem Docker'
