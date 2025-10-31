@@ -1,0 +1,16 @@
+name: Desafio Download docker
+
+on:
+  workflow_dispatch:
+    inputs:
+      nome:
+        description: "Seu nome"
+        required: true
+        type: string
+
+jobs:
+  hello:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Saudação
+        run: echo "Olá, ${{ github.event.inputs.nome }}!"
