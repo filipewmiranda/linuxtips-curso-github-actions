@@ -6,6 +6,7 @@ on:
       docker_image:
         description: 'Digite a imagem Docker (ex.: nginx:latest)'
         required: true
+        type: string
 
 jobs:
   run-image-docker:
