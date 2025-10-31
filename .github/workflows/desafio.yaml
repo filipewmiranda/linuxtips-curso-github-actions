@@ -15,10 +15,8 @@ jobs:
       - name: Verificando a Imagem!
         run: echo "Olá, ${{ github.event.inputs.docker-image }}!"
 
-    steps:
       - name: Fazendo Download da imagem Docker.
         run: docker pull ${{ github.event.inputs.docker-image }}
 
-    steps:
       - name: Listando as imagens docker.
         run: docker images
