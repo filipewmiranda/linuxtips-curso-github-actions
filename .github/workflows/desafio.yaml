@@ -17,7 +17,7 @@ jobs:
 
     steps:
       - name: Fazendo Download da imagem Docker.
-        run: docker pull ${{ github.inputs.docker-image }}
+        run: docker pull ${{ github.event.inputs.docker-image }}
 
     steps:
       - name: Listando as imagens docker.
