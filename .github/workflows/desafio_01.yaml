@@ -12,9 +12,7 @@ jobs:
   run-image-docker:
     runs-on: ubuntu-latest
     steps:
-     # - name: Mostrar input
-     #   run: echo "Usando imagem: ${{ github.event.inputs.docker_image }}"
-
+  
       - name: Pull da imagem
         run: docker pull "${{ github.event.inputs.docker_image }}"
 
