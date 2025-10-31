@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       docker_image:
-        description: 'Digite a imagem Docker (ex.: nginx:latest)'
+        description: "Digite a imagem Docker (ex.: nginx:latest)"
         required: true
         type: string
 
@@ -18,5 +18,5 @@ jobs:
       - name: Pull da imagem
         run: docker pull "${{ github.event.inputs.docker_image }}"
 
-      - name: Verificar imagens locais (opcional)
+      - name: Verificar imagens locais
         run: docker images
