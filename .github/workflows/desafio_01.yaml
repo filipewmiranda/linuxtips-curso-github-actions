@@ -17,3 +17,6 @@ jobs:
 
       - name: Pull da imagem
         run: docker pull "${{ github.event.inputs.docker_image }}"
+
+      - name: Verificar imagens locais (opcional)
+        run: docker images
