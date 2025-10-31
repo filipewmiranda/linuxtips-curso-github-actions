@@ -9,7 +9,7 @@ on:
         type: string
 
 jobs:
-  hello:
+  Baixando imagem docker:
     runs-on: ubuntu-latest
     steps:
       - name: Verificando a Imagem!
