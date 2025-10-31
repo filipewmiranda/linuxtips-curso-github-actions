@@ -3,8 +3,8 @@ name: Desafio Download docker
 on:
   workflow_dispatch:
     inputs:
-      nome:
-        description: "Seu nome"
+      docker-image:
+        description: "Qual imagem Docker deseja fazer o download?"
         required: true
         type: string
 
@@ -12,5 +12,13 @@ jobs:
   hello:
     runs-on: ubuntu-latest
     steps:
-      - name: Saudação
-        run: echo "Olá, ${{ github.event.inputs.nome }}!"
+      - name: Verificando a Imagem!
+        run: echo "Olá, ${{ github.event.inputs.docker-image }}!"
+
+    steps:
+      - name: Fazendo Download da imagem Docker.
+        run: docker pull ${{ github.inputs.docker-image }}
+
+    steps:
+      - name: Listando as imagens docker.
+        run: docker images
