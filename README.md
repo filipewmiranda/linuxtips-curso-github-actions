@@ -11,3 +11,12 @@ ACTIONS OFICIAL DO DOCKER SCOUT: https://github.com/docker/scout-action
 
 WORKFLOW DISPATCH: https://docs.github.com/pt/actions/reference/workflows-and-actions/events-that-trigger-workflows#workflow_dispatch
 
+DOCUMENTAÇÃO DO GITHUB ACTIONS: https://docs.github.com/pt/actions
+
+GITHUB MARKETPLACE: https://github.com/marketplace
+
+LIVRO: Learning GitHub Actions: Automation and Integration of CI/CD with GitHub 
+https://www.oreilly.com/library/view/learning-github-actions/9781098131067/
+
+LIVRO: GitHub Actions in Action
+https://www.manning.com/books/github-actions-in-action
