@@ -9,7 +9,7 @@ on:
         type: string
 
 jobs:
-  desafio docker:
+  desafio_docker:
     runs-on: ubuntu-latest
     steps:
       - name: Verificando a Imagem!
