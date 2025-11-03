@@ -1,4 +1,4 @@
-name: Desafio Download docker
+name: DesafioAula01
 
 on:
   workflow_dispatch:
@@ -9,7 +9,7 @@ on:
         type: string
 
 jobs:
-  Baixando imagem docker:
+  desafio docker:
     runs-on: ubuntu-latest
     steps:
       - name: Verificando a Imagem!
