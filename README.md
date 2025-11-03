@@ -20,3 +20,7 @@ https://www.oreilly.com/library/view/learning-github-actions/9781098131067/
 
 LIVRO: GitHub Actions in Action
 https://www.manning.com/books/github-actions-in-action
+
+Segurança
+
+ACTIONS OFICIAL DO DOCKER SCOUT: https://github.com/docker/scout-action
