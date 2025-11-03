@@ -17,6 +17,13 @@ jobs:
       security-events: write
 
     steps:
+
+      - name: Login no Docker Hub
+        uses: docker/login-action@v3
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }} 
+
       - name: Verificando a Imagem!
         run: echo "Olá, ${{ github.event.inputs.docker-image }}!"
 
