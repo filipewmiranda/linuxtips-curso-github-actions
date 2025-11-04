@@ -1,5 +1,5 @@
 # linuxtips-curso-github-actions"
-
+#AULA01
 
 DOWNLOAD ARTIFACT: https://github.com/actions/download-artifact
 
@@ -24,3 +24,5 @@ https://www.manning.com/books/github-actions-in-action
 Segurança
 
 ACTIONS OFICIAL DO DOCKER SCOUT: https://github.com/docker/scout-action
+
+#AULA02
