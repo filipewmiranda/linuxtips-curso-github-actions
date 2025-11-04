@@ -1,0 +1,52 @@
+name: DesafioAula01 Docker Pull + Scout
+
+on:
+  workflow_dispatch:
+    inputs:
+      docker-image:
+        description: "Qual imagem Docker deseja fazer o download?"
+        required: true
+        type: string
+
+jobs:
+  desafio_docker:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: read
+      security-events: write
+
+    steps:
+
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Login no Docker Hub
+        uses: docker/login-action@v3
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }} 
+
+      - name: Verificando a Imagem!
+        run: echo "Olá, ${{ github.event.inputs.docker-image }}!"
+
+      - name: Fazendo Download da imagem Docker.
+        run: docker pull ${{ github.event.inputs.docker-image }}
+
+      - name: Listando as imagens docker.
+        run: docker images
+
+      - name: Docker Scout
+        uses: docker/scout-action@v1
+        with:
+          command: cves
+          image: ${{ github.event.inputs.docker-image }}
+          sarif-file: scout-results.sarif
+          only-severities: critical,high
+          exit-code: true
+
+      - name: Upload SARIF
+        uses: github/codeql-action/upload-sarif@v3
+        with:
+          sarif_file: scout-results.sarif
+
