@@ -27,4 +27,6 @@ ACTIONS OFICIAL DO DOCKER SCOUT: https://github.com/docker/scout-action
 
 #AULA02
 
-Teste
+Branch Protection: https://docs.github.com/pt/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/managing-a-branch-protection-rule
+
+CODEOWNERS: https://docs.github.com/pt/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
